@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lqf-Te-460">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="Iaf-xG-zW1">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="648-v3-uPf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="icon_1433535.png" id="k7M-uG-6fB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rrt-dP-vwr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8oS-eA-fT8">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="4eH-X2-Dis" kind="relationship" relationship="rootViewController" id="DNU-xQ-Qsq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qph-0V-WKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="-125"/>
+        </scene>
+        <!--Tab Bar Item Controller-->
+        <scene sceneID="ax5-6m-0ag">
+            <objects>
+                <viewController id="4eH-X2-Dis" customClass="TabBarItemController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ds-tJ-d02"/>
+                        <viewControllerLayoutGuide type="bottom" id="cHq-GY-fog"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZRi-Uv-9s1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOX-xc-c7V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uOX-xc-c7V" secondAttribute="bottom" id="BG0-eA-CXo"/>
+                            <constraint firstItem="uOX-xc-c7V" firstAttribute="leading" secondItem="ZRi-Uv-9s1" secondAttribute="leading" id="FpY-ZM-T7v"/>
+                            <constraint firstItem="uOX-xc-c7V" firstAttribute="top" secondItem="ZRi-Uv-9s1" secondAttribute="top" id="KIB-Xy-AnX"/>
+                            <constraint firstAttribute="trailing" secondItem="uOX-xc-c7V" secondAttribute="trailing" id="y5E-GW-2tW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GjI-TJ-JRl"/>
+                    <connections>
+                        <outlet property="webView" destination="uOX-xc-c7V" id="kNs-Q3-fDc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4b-FD-LLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="-196"/>
+        </scene>
+        <!--Navigation Controller - Sign In-->
+        <scene sceneID="e0J-fe-tW8">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="FQD-1l-1RR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sign In" image="login-32.png" id="aao-cT-SQJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MtT-Mh-GkU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y0f-yi-iB3" kind="relationship" relationship="rootViewController" id="psb-Ac-3iq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NN6-KY-mtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="585"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JtS-b4-tGO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lqf-Te-460" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="o1u-ib-4LT">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="648-v3-uPf" kind="relationship" relationship="viewControllers" id="JyF-tC-kab"/>
+                        <segue destination="FQD-1l-1RR" kind="relationship" relationship="viewControllers" id="HWJ-M0-hzL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ljh-Yz-fq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="-125"/>
+        </scene>
+        <!--Tab Bar Sign In View Controller-->
+        <scene sceneID="wSc-6O-V5R">
+            <objects>
+                <viewController id="y0f-yi-iB3" customClass="TabBarSignInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Heg-nR-JBx"/>
+                        <viewControllerLayoutGuide type="bottom" id="tEb-xg-zxE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BJ1-K0-7Qb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LaA-Q6-Jkr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LaA-Q6-Jkr" secondAttribute="bottom" id="3B8-8F-Yij"/>
+                            <constraint firstItem="LaA-Q6-Jkr" firstAttribute="leading" secondItem="BJ1-K0-7Qb" secondAttribute="leading" id="pT1-Gy-X1F"/>
+                            <constraint firstItem="LaA-Q6-Jkr" firstAttribute="top" secondItem="BJ1-K0-7Qb" secondAttribute="top" id="tma-Bs-AnY"/>
+                            <constraint firstAttribute="trailing" secondItem="LaA-Q6-Jkr" secondAttribute="trailing" id="ytL-Mf-GQH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lJ7-l5-t4T"/>
+                    <connections>
+                        <outlet property="signInView" destination="LaA-Q6-Jkr" id="tyG-yG-j12"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tg-4i-BSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="467"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_1433535.png" width="35" height="35"/>
+        <image name="login-32.png" width="32" height="32"/>
+    </resources>
+    <color key="tintColor" red="0.12549020349979401" green="0.55294120311737061" blue="0.33725491166114807" alpha="1" colorSpace="deviceRGB"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
